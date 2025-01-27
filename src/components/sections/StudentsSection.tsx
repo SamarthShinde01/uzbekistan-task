@@ -4,8 +4,8 @@ import HeadingAndTitle from "../HeadingAndTitle";
 
 export default function StudentsSection() {
 	return (
-		<div className="w-full h-auto py-20 px-4 sm:px-12 md:px-28">
-			<div className="flex flex-col items-center text-[#000000] text-center space-y-10">
+		<div className="w-full bg-[#F5F5F7] py-16 px-4 sm:px-8">
+			<div className="max-w-screen-xl mx-auto flex flex-col items-center text-center text-[#000000] space-y-10">
 				{/* Heading */}
 				<HeadingAndTitle
 					heading1="Our Happy"
@@ -14,7 +14,7 @@ export default function StudentsSection() {
 				/>
 
 				{/* Testimonials */}
-				<div className="flex flex-wrap justify-center gap-8">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
 					{TestinomialData.map((data, index) => (
 						<TestimonialCard data={data} key={index} />
 					))}

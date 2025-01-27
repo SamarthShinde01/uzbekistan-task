@@ -101,16 +101,16 @@ const studyBoxData = [
 
 export default function StudySection() {
 	return (
-		<div className="relative w-full bg-white py-12 px-4 sm:px-8 md:px-16 lg:px-24">
+		<div className="relative w-full bg-white py-12 px-4 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
 			{/* Left-side box on larger screens */}
-			<BoxesDesignSvg cname="hidden md:block absolute top-14 left-0 z-0" />
+			<BoxesDesignSvg cname="hidden md:block absolute top-0 left-0 z-0 transform -translate-y-1/2" />
 
-			<div className="flex flex-col items-center py-8 space-y-12">
+			<div className="relative z-10 flex flex-col items-center py-8 space-y-12">
 				{/* Title */}
 				<HeadingAndTitle heading1="Why Study MBBS in" heading2="Uzbekistan ?" />
 
 				{/* Study Boxes */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center w-full">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
 					{studyBoxData.map((item, index) => (
 						<StudyBoxItem
 							key={index}
@@ -123,7 +123,7 @@ export default function StudySection() {
 			</div>
 
 			{/* Right-side box on larger screens */}
-			<BoxesDesignSvg cname="hidden md:block absolute bottom-14 right-0 z-0" />
+			<BoxesDesignSvg cname="hidden md:block absolute bottom-0 right-0 z-0 transform translate-y-1/2" />
 		</div>
 	);
 }
